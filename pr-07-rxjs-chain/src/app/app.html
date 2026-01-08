@@ -1,0 +1,16 @@
+<h2>Користувачі</h2>
+<ul>
+  <li *ngFor="let user of users">
+    <button (click)="selectUser(user.id)">
+      {{ user.name }}
+    </button>
+  </li>
+</ul>
+
+<h2>Пости обраного користувача</h2>
+<ul>
+  <li *ngFor="let post of posts">
+    <b>{{ post.title }}</b>
+    <p>{{ post.body }}</p>
+  </li>
+</ul>
