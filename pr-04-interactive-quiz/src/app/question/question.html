@@ -1,0 +1,12 @@
+<h3>{{ question.text }}</h3>
+
+<ul>
+  <li *ngFor="let option of question.options; let i = index"
+      (click)="selectAnswer(i)"
+      [ngClass]="{
+      selected: selectedIndex === i,
+      correct: showCorrect && question.correctIndex === i
+    }">
+    {{ option }}
+  </li>
+</ul>
