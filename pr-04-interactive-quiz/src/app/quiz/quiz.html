@@ -1,0 +1,11 @@
+<app-question [question]="quizQuestion"
+              (answerSelected)="onAnswerSelected($event)">
+</app-question>
+
+<p *ngIf="selectedAnswer">
+  Ви обрали: <b>{{ selectedAnswer }}</b>
+</p>
+
+<button (click)="showCorrectAnswer()">
+  Показати відповідь
+</button>
