@@ -1,12 +1,10 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
+import { ProductTable } from './product-table/product-table';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.html',
-  styleUrl: './app.css'
+  standalone: true,
+  imports: [ProductTable],
+  template: `<app-product-table></app-product-table>`,
 })
-export class App {
-  protected readonly title = signal('pr-03-dynamic-table');
-}
+export class App {}
